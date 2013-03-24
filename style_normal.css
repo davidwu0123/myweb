@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Monofett);
+
+h1 { font-family: 'Monofett', cursive;
+     font-size: 48px;
+     font-color: orange; }
+
+dt { 
+float:left
+padding: 0 20px 0 0;
+
+
+}
+
+dd {
+
+}
+
+nav, ul, li{
+  display:inline;
+}
+
+ul > li{
+  margin: 10px;
+  padding: 10px;
+  border-color:orange; border-style:dotted;
+
+}
+
+hr{ 
+    margin: 20px 0 0 0;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
