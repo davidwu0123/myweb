@@ -1,17 +1,7 @@
 <html>
 <head>
 
-<style>
-  label, input{
-    display:block;
-  }
-
-  input[type=checkbox], input[type=radio]{
-    display:inline;
-}
-
-  
-</style>
+<link rel="stylesheet" type="text/css" href="style_normal_contact.css">
 
 
 </head>
@@ -30,26 +20,26 @@ mNlE6MQ&ifq" method="POST">
     </p>
 
     <p>
-      <label for="gender">Gender</label>
-      <input type=radio name="entry.1.group" value="Boy">Boy
-      <input type=radio name="entry.1.group" value="Girl">Girl
+      <h1>Gender:</h1>
+      <input type=radio name="entry.1.group" value="Boy"><label for="gender">Boy</label>
+      <input type=radio name="entry.1.group" value="Girl"><label for="gender">Girl</label>
     </p>
 
 
     <p>
-      <label for="favorite_food">Favorites Food</label>
+      <h1>Favorites Food:</h1>
           <input type="checkbox" name="entry.2.group"
-           id="favorite_food" value="Apple">Apple
+           id="favorite_food" value="Apple"><label for="favorite_food">Apple</label>
           <input type="checkbox" name="entry.2.group"
-           id="favorite_food" value="Banana">Banana          
+           id="favorite_food" value="Banana"><label for="favorite_food">Banana</label>         
           <input type="checkbox" name="entry.2.group"
-           id="favorite_food" value="Lemon">Lemon
+           id="favorite_food" value="Lemon"><label for="favorite_food">Lemon</label> 
           <input type="checkbox" name="entry.2.group"
-           id="favorite_food" value="Watermelon">Watermelon
+           id="favorite_food" value="Watermelon"><label for="favorite_food">Watermelon</label> 
     </p>
 
     <p>
-      <label for="relationship">Relationship</label>
+      <h1>Relationship:</h1>
       <select name="entry.3.single" id="relationship">
       <option>single
       <option>dating
@@ -59,12 +49,12 @@ mNlE6MQ&ifq" method="POST">
     </p>
 
     <p>
-      <label for="mail">Email</label>
+      <h1>Email:</h1>
       <input type="text" name="entry.4.single" id="mail">
     </p>
 
     <p>
-      <label for="comments">Comments</label>
+      <h1>Comments:</h1>
       <textarea name="entry.5.single" cols="30" rows="5"
       id="comments"></textarea>
       
@@ -73,9 +63,11 @@ mNlE6MQ&ifq" method="POST">
     <input name="submit" type="submit" value="submit"></form>
   </form>
 
-  <p>
+  <hr>
+
+  <div class="back">
     <a href="index.html">Back to top</a>
-  </p>
+  </div>
 
 </body>
 
