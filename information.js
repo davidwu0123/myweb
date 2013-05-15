@@ -73,11 +73,11 @@ function init_address(){
 
                $("#date").text(data.query.results.channel.item.pubDate) 
                  .appendTo('body .date'); 
-               $("#lat").text(data.query.results.channel.item.lat) 
+               $("#lat").text(data.query.results.channel.item.lat+",")
                  .appendTo('body .lat'); 
                $("#long").text(data.query.results.channel.item.long) 
                  .appendTo('body .long'); 
-               $("#temp").text(data.query.results.channel.item.condition.temp) 
+               $("#temp").text(data.query.results.channel.item.condition.temp+"℉") 
                  .appendTo('body .temp'); 
                $("#text").text(data.query.results.channel.item.condition.text) 
                  .appendTo('body .text'); 

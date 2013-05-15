@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+#lat, #long{
+display:inline;
+}
+
+input{
+ width: 0px
+}
+
+p{
+display:inline-block;
+margin: 8px;
+padding: 8px;
+border-color:orange; border-style:dotted;
+}
+
+body{
+background-color:black;
+color:white;
+}
+
+#information{
+display:inline-block;
+margin: 10px;
+padding: 20px;
+width: 600px;
+height: 400px;
+border-color:orange; border-style:dotted;
+
+}
+
+.back{
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  border-color:orange; border-style:dotted;
+
+}
+
+a:link {color:white}
+a:visited {color:gray}
+a:hover {color: orange; 
+         font-size:18 px; font-weight: bold;
+         cursor:crosshair;
+}
+a:active {color: red; 
+          font-size:18 px; }
+		  
+hr{ 
+    margin: 20px 0 0 0;
+    border: 0;
+    height: 1px;
+    background-image: 
+-webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
+    background-image:    
+-moz-linear-gradient(left, rgbaa(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
+    background-image:     
+-ms-linear-gradient(left, rgbaa(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
+    background-image:      
+-o-linear-gradient(left, rgbaa(255,255,255,0), rgba(255,255,255,245), rgba(255,255,255,0));
+}
